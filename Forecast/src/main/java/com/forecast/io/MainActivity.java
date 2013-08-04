@@ -23,7 +23,7 @@ public class MainActivity extends Activity {
 
         setContentView(R.layout.activity_main);
 
-/*       HourlyForecastService.Request request = HourlyForecastService.Request.newBuilder( API_KEY )
+      HourlyForecastService.Request request = HourlyForecastService.Request.newBuilder( API_KEY )
                 .setForecastType( HourlyForecastService.ForecastType.FORECAST )
                 .setLatitude( 37.422006 )
                 .setLongitude(-122.084095)
@@ -44,7 +44,7 @@ public class MainActivity extends Activity {
                 Toast.makeText( MainActivity.this, response.getForecastResponse().getCurrentSummary(), Toast.LENGTH_SHORT ).show();
             }
 
-        }.execute( request );*/
+        }.execute( request );
 
          MultiplePointsService.Request multiple = MultiplePointsService.Request.newBuilder( API_KEY )
                 .setPoint( LatLng.newBuilder()
@@ -77,7 +77,7 @@ public class MainActivity extends Activity {
 
         }.execute( multiple );
 
-        /*new NetworkServiceTask() {
+        new NetworkServiceTask() {
 
             @Override
             protected void onPostExecute( INetworkResponse network ) {
@@ -95,7 +95,7 @@ public class MainActivity extends Activity {
                         storms.getInterestingStorms().get( 0 ).getCity() : "NO INTERESTING STORMS", Toast.LENGTH_SHORT ).show();
             }
 
-        }.execute( InterestingStormsService.Request.newBuilder( API_KEY ).build() );*/
+        }.execute( InterestingStormsService.Request.newBuilder( API_KEY ).build() );
     }
 
 }
