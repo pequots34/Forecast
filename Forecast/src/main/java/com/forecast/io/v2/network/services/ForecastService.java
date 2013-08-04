@@ -51,7 +51,7 @@ public class ForecastService {
                     .setName( "forecast" )
                     .setParts( getPath() )
                     .setVersion( NetworkUtils.Version.V2 )
-                    .setProtocol(NetworkUtils.Protocol.HTTPS)
+                    .setProtocol( NetworkUtils.Protocol.HTTPS )
                     .build()
                     .getUri();
         }
@@ -85,7 +85,7 @@ public class ForecastService {
 		
 		@Override
 		public void onNetworkResponse( JSONObject data ) throws JSONException, IllegalStateException {
-			super.onNetworkResponse(data);
+			super.onNetworkResponse( data );
 			
 			if ( getStatus() == Status.SUCCESS ) {
 				mForecast = ForecastResponse.newBuilder()
@@ -124,7 +124,7 @@ public class ForecastService {
 		
 		private DataBlock getDataBlock( JSONObject data ) {
 			if ( data != null ) {
-                DataBlock.Builder builder = DataBlock.newDataBlockBuilder()
+                DataBlock.Builder builder = DataBlock.newBuilder()
 						.setIcon( data.optString( "icon" ) )
 						.setSummary( data.optString( "summary" ) );
 				

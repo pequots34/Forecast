@@ -62,7 +62,7 @@ public class DataBlock implements Parcelable {
 		return mIcon;
 	}
 	
-	public static Builder newDataBlockBuilder() {
+	public static Builder newBuilder() {
 		return new Builder();
 	}
 	

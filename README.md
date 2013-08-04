@@ -1,4 +1,4 @@
-      Version 1:
+      VERSION 1:
 
         HourlyForecastService.Request request = HourlyForecastService.Request.newBuilder( API_KEY )
                 .setForecastType( HourlyForecastService.ForecastType.FORECAST )
@@ -73,5 +73,24 @@
             }
 
         }.execute( InterestingStormsService.Request.newBuilder( API_KEY ).build() );
+
+        VERSION 2
+
+        new NetworkServiceTask() {
+
+            @Override
+            protected void onPostExecute( INetworkResponse network ) {
+                if ( network == null || network.getStatus() == NetworkResponse.Status.FAIL ) {
+                    Toast.makeText( MainActivity.this, "FORECAST ERROR", Toast.LENGTH_SHORT ).show();
+
+                    return;
+                }
+
+                ForecastService.Response response = ( ForecastService.Response ) network;
+
+                Toast.makeText( MainActivity.this, response.getForecast() != null ?
+                        response.getForecast().getCurrently().getSummary() : "FORECAST", Toast.LENGTH_SHORT ).show();
+            }
+        }.execute( request );
 
         API Doc: https://developer.forecast.io/
