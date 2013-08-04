@@ -74,4 +74,4 @@
 
         }.execute( InterestingStormsService.Request.newBuilder( API_KEY ).build() );
 
-        Developers: https://developer.forecast.io/
+        API Doc: https://developer.forecast.io/
