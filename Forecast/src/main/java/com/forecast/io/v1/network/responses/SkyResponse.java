@@ -8,7 +8,7 @@ import android.os.Parcelable;
 import com.forecast.io.v1.transfer.DayPrecipitation;
 import com.forecast.io.v1.transfer.Precipitation;
 
-public final class ForecastResponse implements Parcelable {
+public final class SkyResponse implements Parcelable {
 
 	private boolean mIsPrecipitating;
 	
@@ -32,7 +32,7 @@ public final class ForecastResponse implements Parcelable {
 	
 	private List<DayPrecipitation> mDayPrecipitation;
 	
-	public ForecastResponse(Builder builder) {
+	public SkyResponse(Builder builder) {
 		super();
 		
 		mIsPrecipitating = builder.isPrecipitating;
@@ -58,7 +58,7 @@ public final class ForecastResponse implements Parcelable {
 		mDayPrecipitation = builder.dayPrecipitation;
 	}
 	
-	public ForecastResponse(Parcel source) {
+	public SkyResponse(Parcel source) {
 		super();
 		
 		mIsPrecipitating = ( source.readByte() == 1 );
@@ -198,8 +198,8 @@ public final class ForecastResponse implements Parcelable {
 			dayPrecipitation = new ArrayList<DayPrecipitation>();
 		}
 		
-		public ForecastResponse build() {
-			return new ForecastResponse( this );
+		public SkyResponse build() {
+			return new SkyResponse( this );
 		}
 		
 		public Builder setCurrentSummary( String summary ) {
@@ -295,14 +295,14 @@ public final class ForecastResponse implements Parcelable {
 		
 	}
 	
-	public static final Creator<ForecastResponse> CREATOR = new Creator<ForecastResponse>() {
+	public static final Creator<SkyResponse> CREATOR = new Creator<SkyResponse>() {
 		
-        public ForecastResponse createFromParcel( Parcel in ) {
-            return new ForecastResponse( in );
+        public SkyResponse createFromParcel( Parcel in ) {
+            return new SkyResponse( in );
         }
  
-        public ForecastResponse[] newArray( int size ) {
-            return new ForecastResponse[ size ];
+        public SkyResponse[] newArray( int size ) {
+            return new SkyResponse[ size ];
         }
     };
 

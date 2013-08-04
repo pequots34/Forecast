@@ -1,4 +1,4 @@
-package com.forecast.io.v1.network.requests;
+package com.forecast.io.v1.network.services;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,7 +8,7 @@ import com.forecast.io.network.Network;
 import com.forecast.io.network.requests.NetworkRequest;
 import com.forecast.io.network.responses.NetworkResponse;
 import com.forecast.io.utilities.NetworkUtils;
-import com.forecast.io.v1.network.responses.ForecastResponse;
+import com.forecast.io.v1.network.responses.SkyResponse;
 import com.forecast.io.v1.transfer.DayPrecipitation;
 import com.forecast.io.v1.transfer.Precipitation;
 import org.json.JSONArray;
@@ -91,9 +91,9 @@ public class HourlyForecastService {
 	
 	public static class Response extends NetworkResponse {
 		
-		private ForecastResponse mSkyForecast;
+		private SkyResponse mSkyForecast;
 		
-		public ForecastResponse getForecastResponse() {
+		public SkyResponse getForecastResponse() {
 			return mSkyForecast;
 		}
 		
@@ -106,7 +106,7 @@ public class HourlyForecastService {
 				
 				JSONArray dayPrecipitation = data.optJSONArray( "dayPrecipitation" );
 
-                ForecastResponse.Builder builder = ForecastResponse.newBuilder()
+                SkyResponse.Builder builder = SkyResponse.newBuilder()
 						.setPrecipitating( data.optBoolean( "isPrecipitating" ) )
 						.setMinutesUntilChange( data.optInt( "minutesUntilChange" ) )
 						.setCurrentSummary( data.optString( "currentSummary" ) )

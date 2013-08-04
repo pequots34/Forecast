@@ -1,6 +1,6 @@
       Version 1:
 
-      HourlyForecastService.Request request = HourlyForecastService.Request.newBuilder( API_KEY )
+        HourlyForecastService.Request request = HourlyForecastService.Request.newBuilder( API_KEY )
                 .setForecastType( HourlyForecastService.ForecastType.FORECAST )
                 .setLatitude( 37.422006 )
                 .setLongitude(-122.084095)
@@ -11,7 +11,7 @@
             @Override
             protected void onPostExecute( INetworkResponse network ) {
                 if ( network == null || network.getStatus() == NetworkResponse.Status.FAIL ) {
-                    Toast.makeText( MainActivity.this, "HOURLY ERROR", Toast.LENGTH_SHORT ).show();
+                    Toast.makeText(MainActivity.this, "HOURLY ERROR", Toast.LENGTH_SHORT).show();
 
                     return;
                 }

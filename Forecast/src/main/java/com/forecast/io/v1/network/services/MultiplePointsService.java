@@ -1,4 +1,4 @@
-package com.forecast.io.v1.network.requests;
+package com.forecast.io.v1.network.services;
 
 import java.util.ArrayList;
 import java.util.List;

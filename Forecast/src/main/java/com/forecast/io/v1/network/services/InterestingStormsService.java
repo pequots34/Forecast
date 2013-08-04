@@ -1,4 +1,4 @@
-package com.forecast.io.v1.network.requests;
+package com.forecast.io.v1.network.services;
 
 import android.net.Uri;
 import com.forecast.io.network.Network;
