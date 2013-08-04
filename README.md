@@ -1,3 +1,5 @@
+      Version 1:
+
       HourlyForecastService.Request request = HourlyForecastService.Request.newBuilder( API_KEY )
                 .setForecastType( HourlyForecastService.ForecastType.FORECAST )
                 .setLatitude( 37.422006 )
@@ -71,3 +73,5 @@
             }
 
         }.execute( InterestingStormsService.Request.newBuilder( API_KEY ).build() );
+
+        Developers: https://developer.forecast.io/
