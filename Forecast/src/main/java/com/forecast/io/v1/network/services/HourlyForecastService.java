@@ -93,7 +93,7 @@ public class HourlyForecastService {
 		
 		private SkyResponse mSkyForecast;
 		
-		public SkyResponse getForecastResponse() {
+		public SkyResponse getSkyResponse() {
 			return mSkyForecast;
 		}
 		
