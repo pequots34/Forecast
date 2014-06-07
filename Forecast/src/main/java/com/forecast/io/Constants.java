@@ -1,7 +1,7 @@
 package com.forecast.io;
 
 /**
- * Created by Pequots34 on 7/31/13.
+ * Created: Christopher Alex Brown on 7/31/13.
  */
 public class Constants {
 

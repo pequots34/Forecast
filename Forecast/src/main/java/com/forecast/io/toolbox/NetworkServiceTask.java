@@ -16,7 +16,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 /**
- * Created by Pequots34 on 7/31/13.
+ * Created: Christopher Alex Brown on 7/31/13.
  */
 public class NetworkServiceTask extends AsyncTask<INetworkRequest, Void, INetworkResponse> {
 
