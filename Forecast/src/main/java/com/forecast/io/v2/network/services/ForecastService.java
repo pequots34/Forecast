@@ -1,9 +1,21 @@
+/*
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
 package com.forecast.io.v2.network.services;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import android.net.Uri;
+
 import com.forecast.io.network.Network;
 import com.forecast.io.network.requests.NetworkRequest;
 import com.forecast.io.network.responses.INetworkResponse;
@@ -13,9 +25,13 @@ import com.forecast.io.v2.network.responses.ForecastResponse;
 import com.forecast.io.v2.transfer.DataBlock;
 import com.forecast.io.v2.transfer.DataPoint;
 import com.forecast.io.v2.transfer.LatLng;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class ForecastService {
 
