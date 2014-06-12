@@ -1,4 +1,11 @@
 .gradle
 /local.properties
 /.idea/workspace.xml
+
+# Intellij
+.idea/
+*.iml
+*.iws
+
+# Mac
 .DS_Store
