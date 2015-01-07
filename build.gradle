@@ -1,21 +1,15 @@
 buildscript {
     repositories {
-        mavenCentral()
+        jcenter()
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:0.12.+'
+        classpath 'com.android.tools.build:gradle:1.0.0'
     }
 }
 
 allprojects {
     repositories {
-        mavenCentral()
-    }
-
-    tasks.withType( JavaCompile ) {
-        options.encoding = "UTF-8"
-
-        options.compilerArgs << "-Xlint:unchecked"
+        jcenter()
     }
 }

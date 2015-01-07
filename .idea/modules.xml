@@ -4,7 +4,6 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Forecast.iml" filepath="$PROJECT_DIR$/Forecast.iml" />
       <module fileurl="file://$PROJECT_DIR$/Forecast/Forecast-Forecast.iml" filepath="$PROJECT_DIR$/Forecast/Forecast-Forecast.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ForecastProject.iml" filepath="$PROJECT_DIR$/ForecastProject.iml" />
     </modules>
   </component>
 </project>

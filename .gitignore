@@ -1,11 +1,27 @@
-.gradle
+# Built application files
+/*/build/
+ 
+# Crashlytics configuations
+com_crashlytics_export_strings.xml
+ 
+# Local configuration file (sdk path, etc)
 /local.properties
-/.idea/workspace.xml
-
-# Intellij
-.idea/
+ 
+# Gradle generated files
+.gradle/
+ 
+# Signing files
+.signing/
+ 
+# User-specific configurations
 *.iml
-*.iws
-
-# Mac
+/*/.idea/
+ 
+# OS-specific files
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db

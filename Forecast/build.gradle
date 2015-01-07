@@ -1,31 +1,47 @@
 apply plugin: 'android-library'
 
-repositories {
-    mavenCentral()
-}
-
 android {
-    compileSdkVersion 19
-    buildToolsVersion "19.1.0"
+    compileSdkVersion 21
+    buildToolsVersion "21.1.2"
 
     defaultConfig {
         minSdkVersion 8
-        targetSdkVersion 19
-        versionCode 2
-        versionName "1.1"
+        targetSdkVersion 21
+        versionCode 3
+        versionName "1.2"
     }
 
     buildTypes {
 
         release {
-            runProguard false
+            minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
         }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/ASL2.0'
+        exclude 'LICENSE.txt'
+    }
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
     }
 }
 
 dependencies {
-    compile 'com.android.support:support-v13:19.0.+'
+    compile 'com.android.support:support-v4:21.0.3'
 
     compile fileTree(dir: 'libs', include: ['*.jar'])
 }
